@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
@@ -7,7 +7,33 @@ import Directors from "./Directors";
 import Movies from "./Movies";
 
 function App() {
-  return <div>{/*{code here}*/}</div>;
+  // const [selectItems, setSelectItems] = [];
+
+  // useEffect(() => {
+  //   fetch("/data")
+  //     .then((r) => r.json())
+  //     .then((items) => console.log(items));
+  // }, []);
+
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/movies">
+          <Movies />
+        </Route>
+        <Route exact path="/directors">
+          <Directors />
+        </Route>
+        <Route exact path="/actors">
+          <Actors />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;

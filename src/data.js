@@ -9,6 +9,7 @@ const movies = [
     time: 92,
     genres: ["Animation", "Adventure", "Comedy", "Family", "Fantasy"],
   },
+  
   {
     title: "Jack Reacher: Never Go Back",
     time: 118,
